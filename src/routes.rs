@@ -112,8 +112,8 @@ pub(crate) async fn user_page(req: Request<State>) -> tide::Result<impl Into<Res
             &DecodingKey::from_secret(env::var("SECRET").unwrap().as_bytes()),
             &validation,
         ) {
-            Ok(c) => true,
-            Err(err) => false,
+            Ok(_c) => true,
+            Err(_err) => false,
         }
     } else {
         false

@@ -4,7 +4,6 @@ mod state;
 use state::State;
 
 use dotenv::dotenv;
-use std::env;
 
 #[async_std::main]
 async fn main() -> tide::Result<()> {
